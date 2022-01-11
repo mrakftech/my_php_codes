@@ -1,0 +1,50 @@
+<html>
+
+<head>
+<title>PHP Login Page</Title>
+<link rel="stylesheeet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div id = "frm" align="center">  
+        <h1>Members Login</h1>  
+        <form name="f1" action = "checklogin.php" onsubmit = "return validation()" method = "POST">  
+            <p>  
+                <label> UserName: </label>  
+                <input type = "text" id="user" name= "my_user" />  
+            </p>  
+            <p>  
+                <label> Password: </label>  
+                <input type = "password" id="pass" name= "my_pass" />  
+            </p>  
+            <p>     
+                <input name="submit1" type="submit" id="btn" value = "Login" />  
+            </p>  
+        </form>  
+    </div>  
+
+	<script>  
+            function validation()  
+            {  
+                var id=document.f1.my_user.value;  
+                var ps=document.f1.my_pass.value;  
+                if(id.length=="" && ps.length=="") {  
+                    alert("User Name and Password fields are empty");  
+                    return false;  
+                }  
+                else  
+                {  
+                    if(id.length=="") {  
+                        alert("User Name is empty");  
+                        return false;  
+                    }   
+                    if (ps.length=="") {  
+                    alert("Password field is empty");  
+                    return false;  
+                    }  
+                }                             
+            }  
+    </script>  
+
+</body>
+</html>
